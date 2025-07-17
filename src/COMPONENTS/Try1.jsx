@@ -7,7 +7,9 @@ const Try1 = () => {
     try {
       setfetching(true);
       const resp = await fetch(
-        `https://backend-spring-e04h.onrender.com/api/v1/userrs`
+        // `https://backend-spring-e04h.onrender.com/api/v1/userrs`
+        // `http://localhost:8083/api/v1/userrs`
+        `http://3.82.136.89:8080/api/v1/userrs`
       );
       if (!resp.ok) {
         console.log("error in fetching data");
