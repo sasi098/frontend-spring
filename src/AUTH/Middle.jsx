@@ -11,7 +11,7 @@ const Middle = () => {
   useEffect(() => {
     const fetchauth = async () => {
       try {
-        const resp = await fetch(`http://localhost:8081/oauth/user-info`, {
+        const resp = await fetch(`http://localhost:8083/oauth/user-info`, {
           credentials: "include",
         });
         if (!resp.ok) {
@@ -23,7 +23,7 @@ const Middle = () => {
         if (data.exist === true) {
           saveusername(data.username);
           const tores = await fetch(
-            `http://localhost:8081/token/tokengen/${data.username}`,
+            `http://localhost:8083/token/tokengen/${data.username}`,
             {
               credentials: "include",
               // method: "POST",
@@ -55,7 +55,7 @@ const Middle = () => {
     e.preventDefault();
 
     try {
-      const resp = await fetch(`http://localhost:8081/oauth/register`, {
+      const resp = await fetch(`http://localhost:8083/oauth/register`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -79,7 +79,7 @@ const Middle = () => {
       if (res.exist == false) {
         try {
           const res = await fetch(
-            `http://localhost:8081/token/tokengen/${username}`,
+            `http://localhost:8083/token/tokengen/${username}`,
             {
               credentials: "include",
               // method: "POST",

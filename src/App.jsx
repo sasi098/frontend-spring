@@ -30,7 +30,7 @@ function App() {
   return (
     <div>
       <ToastContainer />
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<PublicRoute element={<LoginPage />} />} />
           <Route
@@ -43,13 +43,13 @@ function App() {
           />
           <Route path="/try1" element={<ProtectedRoute element={<Try1 />} />} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Try1 />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }

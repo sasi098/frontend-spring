@@ -16,7 +16,7 @@ const LoginPage = () => {
     }
     const fetchprovode = async () => {
       try {
-        const resp = await fetch(`http://localhost:8081/oauth/authlogin`, {
+        const resp = await fetch(`http://localhost:8083/oauth/authlogin`, {
           credentials: "include",
           headers: {
             "Content-Type": "application/json",
@@ -29,7 +29,7 @@ const LoginPage = () => {
         console.log(data);
         saveusername(data);
         const tores = await fetch(
-          `http://localhost:8081/token/tokengen/${data}`,
+          `http://localhost:8083/token/tokengen/${data}`,
           {
             credentials: "include",
             // method: "POST",
@@ -65,7 +65,7 @@ const LoginPage = () => {
       password,
     };
     try {
-      const resp = await fetch(`http://localhost:8081/oauth/login`, {
+      const resp = await fetch(`http://localhost:8083/oauth/login`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -133,7 +133,7 @@ const LoginPage = () => {
             <h1>Sign In</h1>
             <div className="social-icons">
               <a
-                href="http://localhost:8081/oauth2/authorization/google"
+                href="http://localhost:8083/oauth2/authorization/google"
                 onClick={() => setprovider(true)}
                 className="icon"
               >
@@ -143,7 +143,7 @@ const LoginPage = () => {
               <i className="fa-brands fa-facebook-f"></i>
             </a> */}
               <a
-                href="http://localhost:8081/oauth2/authorization/github"
+                href="http://localhost:8083/oauth2/authorization/github"
                 className="icon"
                 onClick={() => setprovider(true)}
               >

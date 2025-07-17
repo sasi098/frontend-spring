@@ -25,7 +25,7 @@ const Register = () => {
     };
 
     try {
-      const resp = await fetch(`http://localhost:8081/oauth/register`, {
+      const resp = await fetch(`http://localhost:8083/oauth/register`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -49,7 +49,7 @@ const Register = () => {
       if (res.exist == false) {
         try {
           const res = await fetch(
-            `http://localhost:8081/token/tokengen/${username}`,
+            `http://localhost:8083/token/tokengen/${username}`,
             {
               credentials: "include",
               // method: "POST",
@@ -132,7 +132,7 @@ const Register = () => {
             <h1>Register</h1>
             <div className="social-icons">
               <a
-                href="http://localhost:8081/oauth2/authorization/google"
+                href="http://localhost:8083/oauth2/authorization/google"
                 className="icon"
               >
                 <i className="fa-brands fa-google-plus-g"></i>
@@ -141,7 +141,7 @@ const Register = () => {
               <i className="fa-brands fa-facebook-f"></i>
             </a> */}
               <a
-                href="http://localhost:8081/oauth2/authorization/github"
+                href="http://localhost:8083/oauth2/authorization/github"
                 className="icon"
               >
                 <i className="fa-brands fa-github"></i>
